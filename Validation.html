@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Enter a number</p>
+    <input id="numberBox" type="number" min="10" max="100" maxlength="5" pattern="[A-Za-z]">
+    <input id="numberBox" type="text" value="abx" readonly>
+
+    <button onclick="validate()">Send</button>
+    <p id= "demo"></p>
+
+    <script>
+        function valdiate(){
+            var numberEntered = document.getElementById("numberBox");
+
+            if (numberEntered.checkValidty()== false)
+            {
+                doucment.getElementById("demo").innerHtml = numberEnted.validationMessage;
+            }
+            else{
+                document.getElementById("demo").innerHtml = "Input OK";
+            }   
+        }
+    </script>   
+
+
+</body>
+</html>
